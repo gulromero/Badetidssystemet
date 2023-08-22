@@ -23,7 +23,23 @@ namespace Badetidssystemet
         public string ID { get { return id;} }
         public string Navn { get { return navn; } } 
         public string Adresse { get { return adresse; } }
-        public int AntalDeltagere { get { return antalDeltagere; } }
+        public int AntalDeltagere
+        { 
+            get { return antalDeltagere; }
+            set
+            {
+                if (value >= 1)
+                {
+                    antalDeltagere = value;
+                }
+
+                else
+                {
+                    Console.WriteLine("Antallet af deltagere skal være mindst 0.");
+                }
+            }
+        
+        }
 
 
         // Kontruktør
