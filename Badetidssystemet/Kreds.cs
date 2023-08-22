@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -35,7 +36,8 @@ namespace Badetidssystemet
 
                 else
                 {
-                    Console.WriteLine("Antallet af deltagere skal være mindst 0.");
+                    //Console.WriteLine("Antallet af deltagere skal være mindst 0.");
+                    throw new ArgumentException("Antallet af deltagere skal være mindst 0.");
                 }
             }
         

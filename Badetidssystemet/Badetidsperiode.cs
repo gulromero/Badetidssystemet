@@ -38,7 +38,8 @@ namespace Badetidssystemet
 
                 else
                 {
-                    Console.WriteLine("Type skal være mindst 4 tegn lang.");
+                    //Console.WriteLine("Type skal være mindst 4 tegn lang.");
+                    throw new ArgumentException("Type skal være mindst 4 tegn lang.");
                 }
             }
         }
@@ -55,10 +56,11 @@ namespace Badetidssystemet
                 {
                     startTidspunkt = value;
 
-                    
+
                 }
                 else
-                    Console.WriteLine("Starttidspunkt må ikke være efter sluttidspunkt.");
+                    // Console.WriteLine("Starttidspunkt må ikke være efter sluttidspunkt.");
+                    throw new ArgumentException("Starttidspunkt må ikke være efter sluttidspunkt.");
             }
 
         }
