@@ -36,8 +36,8 @@ namespace Badetidssystemet
 
                 else
                 {
-                    Console.WriteLine("Antallet af deltagere skal være mindst 0.");
-                    // throw new ArgumentException("Antallet af deltagere skal være mindst 0.");
+                    //Console.WriteLine("Antallet af deltagere skal være mindst 0.");
+                    
                 }
             }
         
