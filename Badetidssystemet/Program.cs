@@ -7,11 +7,12 @@
             // Opretter instanser/eksempler og printer dem ud til konsollen;
 
 
-            Kreds kreds1 = new Kreds("1", "Kreds 1", "Maglehøjen", 10);
-            Kreds kreds2= new Kreds("2", "Kreds 2", "Valby", 9);
+            Kreds kreds1 = new Kreds("4", "Kreds 1", "Maglehøjen", -10);
+            Kreds kreds2= new Kreds("5", "Kreds 2", "Valby", 9);
+
 
             Console.WriteLine(kreds1);
-            Console.WriteLine(kreds2);
+            //Console.WriteLine(kreds2);
 
 
 
@@ -25,13 +26,11 @@
 
             /// AdderKreds(); problemer med key
 
+
             badetidsperiode1.AdderKreds(kreds1);
             badetidsperiode2.AdderKreds(kreds2);
 
-            Console.WriteLine();
-
             // SletKreds();
-
 
             badetidsperiode1.SletKreds("1");
             badetidsperiode2.SletKreds("2");

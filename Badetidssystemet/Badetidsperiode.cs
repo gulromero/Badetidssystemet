@@ -20,9 +20,7 @@ namespace Badetidssystemet
         private DayOfWeek ugeDag;
         private DateTime startTidspunkt;
         private DateTime slutTidspunkt;
-
-        Dictionary<string, Kreds> kredse = new Dictionary<string, Kreds>();
-
+        private Dictionary<string, Kreds> kredse;
 
         //Properties
 
@@ -85,17 +83,9 @@ namespace Badetidssystemet
             ugeDag= UgeDag;
             startTidspunkt= StartTidspunkt;
             slutTidspunkt= SlutTidspunkt;
-
+            
             //Dictionary
-
-           
-
-
-            Kreds kreds1 = new Kreds("1", "Kreds 1", "Maglehøjen", 10);
-            Kreds kreds2 = new Kreds("2", "Kreds 2", "Valby", 9);
-
-            kredse["1"] = kreds1;
-            kredse["2"] = kreds2;
+            kredse = new Dictionary<string, Kreds>();
 
         }
 
@@ -112,8 +102,6 @@ namespace Badetidssystemet
         {
             kredse.Remove(id);
         }
-
-
 
         // ToString() metode: 
         public override string ToString()

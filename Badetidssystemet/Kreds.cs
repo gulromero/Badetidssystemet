@@ -14,30 +14,30 @@ namespace Badetidssystemet
 
         //Opretter instansfelter
 
-        private string id;
-        private string navn;
-        private string adresse;
-        private int antalDeltagere;
+        private string _id;
+        private string _navn;
+        private string _adresse;
+        private int _antalDeltagere;
 
         //properties
 
-        public string ID { get { return id;} }
-        public string Navn { get { return navn; } } 
-        public string Adresse { get { return adresse; } }
+        public string ID { get { return _id;} }
+        public string Navn { get { return _navn; } } 
+        public string Adresse { get { return _adresse; } }
         public int AntalDeltagere
         { 
-            get { return antalDeltagere; }
+            get { return _antalDeltagere; }
             set
             {
                 if (value >= 1)
                 {
-                    antalDeltagere = value;
+                    _antalDeltagere = value;
                 }
 
                 else
                 {
-                    //Console.WriteLine("Antallet af deltagere skal være mindst 0.");
-                    throw new ArgumentException("Antallet af deltagere skal være mindst 0.");
+                    Console.WriteLine("Antallet af deltagere skal være mindst 0.");
+                    // throw new ArgumentException("Antallet af deltagere skal være mindst 0.");
                 }
             }
         
@@ -46,12 +46,12 @@ namespace Badetidssystemet
 
         // Kontruktør
 
-        public Kreds(string ID, string Navn, string Adresse, int AntalDeltagere)
+        public Kreds(string id, string navn, string adresse, int antalDeltagere)
         {
-            id = ID;
-            navn = Navn;
-            adresse = Adresse;
-            antalDeltagere = AntalDeltagere;
+            ID = id;
+            Navn = navn;
+            Adresse = adresse;
+            AntalDeltagere = antalDeltagere;
         }
 
 
