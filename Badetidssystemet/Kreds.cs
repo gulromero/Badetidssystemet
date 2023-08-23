@@ -21,9 +21,9 @@ namespace Badetidssystemet
 
         //properties
 
-        public string ID { get { return _id;} }
-        public string Navn { get { return _navn; } } 
-        public string Adresse { get { return _adresse; } }
+        public string ID { get; }
+        public string Navn { get; } 
+        public string Adresse { get; }
         public int AntalDeltagere
         { 
             get { return _antalDeltagere; }
