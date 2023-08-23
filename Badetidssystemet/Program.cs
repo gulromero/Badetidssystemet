@@ -15,18 +15,21 @@
             //Console.WriteLine(kreds2);
 
 
-           // try
-           // {
+           try
+              {
                 Badetidsperiode badetidsperiode1 = new Badetidsperiode("type 1", DayOfWeek.Sunday, DateTime.Parse("06:30"), DateTime.Parse("08:30"));
-                Badetidsperiode badetidsperiode2 = new Badetidsperiode("type 2", DayOfWeek.Monday, DateTime.Parse("12:30"), DateTime.Parse("14:30"));
-           //  }
-           // catch (Exception ex)
-           // {
-           //    throw new ArgumentException("Antallet af deltagere skal være mindst 0.");
-           // }
-           
-            Console.WriteLine(badetidsperiode1); 
-            Console.WriteLine(badetidsperiode2);
+                
+              }
+           catch (ArgumentException e)
+              {
+                 Console.WriteLine(e.Message);
+              }
+
+            Badetidsperiode badetidsperiode2 = new Badetidsperiode("type 2", DayOfWeek.Monday, DateTime.Parse("12:30"), DateTime.Parse("14:30"));
+
+
+              Console.WriteLine(badetidsperiode1); 
+              Console.WriteLine(badetidsperiode2);
 
 
 
